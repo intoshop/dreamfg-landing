@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="DreamFG Shop - প্রিমিয়াম ডিজিটাল প্রোডাক্ট। কোর্স, ই-বুক, AI টুলস, টেমপ্লেট সব একজায়গায়।">
+<meta name="keywords" content="ডিজিটাল প্রোডাক্ট, কোর্স, ই-বুক, AI টুলস, টেমপ্লেট, DreamFG">
+<meta property="og:title" content="DreamFG Shop - Premium Digital Products">
+<meta property="og:description" content="আপনার ডিজিটাল সাফল্যের পথ শুরু হোক আজই">
+<meta property="og:type" content="website">
+<title>DreamFG Shop — Premium Digital Products</title>
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', 'YOUR_PIXEL_ID');
+fbq('track', 'PageView');
+</script>
+<!-- End Facebook Pixel Code -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #0a0a0f;
+  --bg2: #0f0f1a;
+  --primary: #7c3aed;
+  --secondary: #a855f7;
+  --accent: #c084fc;
+  --card: rgba(255,255,255,0.04);
+  --card-border: rgba(124,58,237,0.2);
+  --text: #f8fafc;
+  --muted: #94a3b8;
+  --success: #10b981;
+  --glow: 0 0 40px rgba(124,58,237,0.3);
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Hind Siliguri', 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  line-height: 1.7;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 3px; }
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(30px); }
+  to { opacity:1; transform:translateY(0); }
+}
+@keyframes float {
+  0%,100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+@keyframes pulse-glow {
+  0%,100% { box-shadow: 0 0 20px rgba(124,58,237,0.4); }
+  50% { box-shadow: 0 0 60px rgba(124,58,237,0.8); }
+}
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+@keyframes countdown {
+  from { transform: scale(1); }
+  to { transform: scale(1.05); }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(10,10,15,0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(124,58,237,0.15);
+  transition: all 0.3s;
+}
+.nav-logo {
+  font-size: 1.4rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--secondary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.nav-logo span { color: var(--accent); }
+.nav-cta {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Hind Siliguri', sans-serif;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+.nav-cta:hover {
+  transform: scale(1.05);
+  box-shadow: var(--glow);
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 24px 80px;
+  position: relative;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(124,58,237,0.15) 0%, transparent 70%),
+              radial-gradient(ellipse 40% 40% at 20% 80%, rgba(168,85,247,0.1) 0%, transparent 60%),
+              radial-gradient(ellipse 40% 40% at 80% 20%, rgba(192,132,252,0.08) 0%, transparent 60%);
+}
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(124,58,237,0.05) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(124,58,237,0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+.hero-content { position: relative; z-index: 2; max-width: 800px; margin: 0 auto; }
+
+.hero-badge {
+  display: inline-block;
+  background: rgba(124,58,237,0.2);
+  border: 1px solid rgba(124,58,237,0.4);
+  color: var(--accent);
+  padding: 6px 20px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  margin-bottom: 24px;
+  animation: fadeUp 0.6s ease forwards;
+}
+.hero h1 {
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  animation: fadeUp 0.8s ease 0.2s both;
+}
+.hero h1 .highlight {
+  background: linear-gradient(135deg, var(--secondary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero p {
+  font-size: 1.15rem;
+  color: var(--muted);
+  margin-bottom: 32px;
+  animation: fadeUp 0.8s ease 0.4s both;
+}
+.hero-benefits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 40px;
+  animation: fadeUp 0.8s ease 0.5s both;
+}
+.benefit-tag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 0.88rem;
+  color: var(--text);
+}
+.benefit-tag span { font-size: 1rem; }
+.hero-btns {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  animation: fadeUp 0.8s ease 0.6s both;
+}
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  border: none;
+  padding: 16px 40px;
+  border-radius: 50px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: 'Hind Siliguri', sans-serif;
+  text-decoration: none;
+  display: inline-block;
+  animation: pulse-glow 2s infinite;
+  transition: transform 0.2s;
+}
+.btn-primary:hover { transform: scale(1.05); }
+.btn-secondary {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 16px 40px;
+  border-radius: 50px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Hind Siliguri', sans-serif;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s;
+}
+.btn-secondary:hover {
+  border-color: var(--primary);
+  color: var(--accent);
+}
+.hero-stats {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  margin-top: 60px;
+  flex-wrap: wrap;
+  animation: fadeUp 0.8s ease 0.8s both;
+}
+.stat { text-align: center; }
+.stat-num {
+  font-size: 2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--secondary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.stat-label { font-size: 0.85rem; color: var(--muted); }
+
+/* FLOATING BLOBS */
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.15;
+  animation: float 6s ease-in-out infinite;
+  pointer-events: none;
+}
+.blob1 { width:300px; height:300px; background:var(--primary); top:10%; left:5%; animation-delay:0s; }
+.blob2 { width:200px; height:200px; background:var(--secondary); top:60%; right:8%; animation-delay:2s; }
+.blob3 { width:150px; height:150px; background:var(--accent); bottom:10%; left:40%; animation-delay:4s; }
+
+/* SECTIONS */
+section { padding: 80px 24px; }
+.container { max-width: 1100px; margin: 0 auto; }
+.section-tag {
+  display: inline-block;
+  background: rgba(124,58,237,0.15);
+  border: 1px solid rgba(124,58,237,0.3);
+  color: var(--accent);
+  padding: 5px 16px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  margin-bottom: 16px;
+  letter-spacing: 0.05em;
+}
+.section-title {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+.section-title .gradient {
+  background: linear-gradient(135deg, var(--secondary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.section-sub { color: var(--muted); font-size: 1rem; margin-bottom: 48px; }
+.text-center { text-align: center; }
+
+/* FEATURES */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-top: 48px;
+}
+.feature-card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  padding: 32px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--primary), transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.feature-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(124,58,237,0.5);
+  box-shadow: 0 20px 60px rgba(124,58,237,0.15);
+}
+.feature-card:hover::before { opacity: 1; }
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  display: block;
+}
+.feature-card h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--text);
+}
+.feature-card p { color: var(--muted); font-size: 0.92rem; }
+
+/* WHY US */
+.why-section { background: var(--bg2); }
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-top: 48px;
+}
+.why-card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  padding: 32px 24px;
+  text-align: center;
+  transition: all 0.3s;
+}
+.why-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--glow);
+  border-color: var(--primary);
+}
+.why-icon {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, rgba(124,58,237,0.3), rgba(168,85,247,0.3));
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin: 0 auto 16px;
+}
+.why-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
+.why-card p { color: var(--muted); font-size: 0.88rem; }
+
+/* PREVIEW */
+.preview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 48px;
+  align-items: center;
+}
+.mockup-area {
+  background: linear-gradient(135deg, rgba(124,58,237,0.2), rgba(168,85,247,0.1));
+  border: 1px solid rgba(124,58,237,0.3);
+  border-radius: 24px;
+  padding: 48px;
+  text-align: center;
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+.mockup-area::after {
+  content: '';
+  position: absolute;
+  inset: -50%;
+  background: conic-gradient(from 0deg, transparent 0%, rgba(124,58,237,0.1) 50%, transparent 100%);
+  animation: float 8s linear infinite;
+}
+.mockup-screen {
+  width: 200px;
+  height: 140px;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  border-radius: 12px;
+  border: 2px solid rgba(124,58,237,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 20px 60px rgba(124,58,237,0.3);
+}
+.mockup-label { color: var(--muted); font-size: 0.85rem; margin-top: 16px; position: relative; z-index: 1; }
+.video-area {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 24px;
+  padding: 32px;
+}
+.video-placeholder {
+  background: linear-gradient(135deg, #0f0f1a, #1a0a2e);
+  border-radius: 16px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.video-placeholder:hover { transform: scale(1.02); }
+.play-btn {
+  width: 60px; height: 60px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: 0 0 30px rgba(124,58,237,0.5);
+  transition: transform 0.2s;
+}
+.play-btn:hover { transform: scale(1.1); }
+.video-area h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
+.video-area p { color: var(--muted); font-size: 0.9rem; }
+
+/* PRICING */
+.pricing-section {
+  background: radial-gradient(ellipse at center, rgba(124,58,237,0.1) 0%, transparent 70%);
+}
+.pricing-card {
+  max-width: 480px;
+  margin: 48px auto 0;
+  background: var(--card);
+  border: 2px solid var(--primary);
+  border-radius: 28px;
+  padding: 48px 40px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 0 80px rgba(124,58,237,0.2);
+}
+.pricing-badge {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  padding: 6px 24px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.price-old {
+  font-size: 1.2rem;
+  color: var(--muted);
+  text-decoration: line-through;
+  margin-bottom: 8px;
+}
+.price-new {
+  font-size: 4rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--secondary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.price-label { color: var(--muted); font-size: 0.9rem; margin-bottom: 24px; }
+.countdown {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+.count-box {
+  background: rgba(124,58,237,0.15);
+  border: 1px solid rgba(124,58,237,0.3);
+  border-radius: 12px;
+  padding: 12px 16px;
+  min-width: 64px;
+  text-align: center;
+}
+.count-num {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--accent);
+  display: block;
+  line-height: 1;
+}
+.count-label { font-size: 0.7rem; color: var(--muted); margin-top: 4px; }
+.pricing-features {
+  list-style: none;
+  margin-bottom: 32px;
+  text-align: left;
+}
+.pricing-features li {
+  padding: 8px 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.pricing-features li::before {
+  content: '✓';
+  color: var(--success);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.btn-buy {
+  width: 100%;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  border: none;
+  padding: 18px;
+  border-radius: 16px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: 'Hind Siliguri', sans-serif;
+  transition: all 0.3s;
+  animation: pulse-glow 2s infinite;
+}
+.btn-buy:hover { transform: scale(1.02); }
+.safe-badge {
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+/* REVIEWS */
+.reviews-section { background: var(--bg2); }
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-top: 48px;
+}
+.review-card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  padding: 28px;
+  transition: all 0.3s;
+}
+.review-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(124,58,237,0.4);
+}
+.review-top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+.avatar {
+  width: 50px; height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.reviewer-name { font-weight: 700; font-size: 1rem; }
+.reviewer-role { color: var(--muted); font-size: 0.8rem; }
+.stars { color: #fbbf24; font-size: 1rem; margin-bottom: 12px; }
+.review-text { color: var(--muted); font-size: 0.92rem; line-height: 1.7; }
+.verified {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--success);
+  font-size: 0.78rem;
+  margin-top: 12px;
+}
+
+/* FAQ */
+.faq-list { max-width: 700px; margin: 48px auto 0; }
+.faq-item {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  transition: border-color 0.3s;
+}
+.faq-item.active { border-color: rgba(124,58,237,0.5); }
+.faq-q {
+  padding: 20px 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 0.97rem;
+  user-select: none;
+}
+.faq-icon {
+  width: 28px; height: 28px;
+  background: rgba(124,58,237,0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  transition: transform 0.3s;
+  flex-shrink: 0;
+}
+.faq-item.active .faq-icon { transform: rotate(45deg); background: var(--primary); }
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.7;
+  padding: 0 24px;
+}
+.faq-item.active .faq-a { max-height: 200px; padding: 0 24px 20px; }
+
+/* FOOTER */
+footer {
+  background: var(--bg2);
+  border-top: 1px solid rgba(124,58,237,0.15);
+  padding: 60px 24px 32px;
+}
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+.footer-brand p { color: var(--muted); font-size: 0.9rem; margin-top: 12px; line-height: 1.8; }
+.footer-col h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 16px; }
+.footer-col a {
+  display: block;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.88rem;
+  margin-bottom: 8px;
+  transition: color 0.2s;
+}
+.footer-col a:hover { color: var(--accent); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: gap;
+  gap: 12px;
+}
+.footer-bottom p { color: var(--muted); font-size: 0.82rem; }
+.social-links { display: flex; gap: 12px; }
+.social-link {
+  width: 36px; height: 36px;
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+.social-link:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  transform: translateY(-3px);
+}
+
+/* STICKY BUY BUTTON */
+.sticky-buy {
+  position: fixed;
+  bottom: 90px;
+  right: 24px;
+  z-index: 999;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: 'Hind Siliguri', sans-serif;
+  box-shadow: 0 8px 32px rgba(124,58,237,0.5);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s;
+  pointer-events: none;
+  text-decoration: none;
+  display: inline-block;
+}
+.sticky-buy.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}
+
+/* WHATSAPP */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+  width: 56px; height: 56px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  text-decoration: none;
+  box-shadow: 0 8px 32px rgba(37,211,102,0.4);
+  transition: all 0.3s;
+  animation: pulse-glow 2s infinite;
+}
+.whatsapp-btn:hover { transform: scale(1.1); }
+
+/* DIVIDER */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(124,58,237,0.3), transparent);
+  margin: 0 24px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .preview-grid { grid-template-columns: 1fr; }
+  .footer-top { grid-template-columns: 1fr; gap: 32px; }
+  .hero-stats { gap: 24px; }
+  .pricing-card { padding: 40px 24px; }
+  .countdown { gap: 8px; }
+  .count-box { padding: 10px 12px; min-width: 56px; }
+}
+@media (max-width: 480px) {
+  nav { padding: 12px 16px; }
+  .nav-logo { font-size: 1.1rem; }
+  .nav-cta { padding: 8px 18px; font-size: 0.82rem; }
+  .hero-btns { flex-direction: column; align-items: center; }
+  .btn-primary, .btn-secondary { width: 100%; max-width: 280px; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav id="navbar">
+  <div class="nav-logo">Dream<span>FG</span> Shop</div>
+  <a href="#pricing" class="nav-cta">এখনই কিনুন 🚀</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+  <div class="blob blob3"></div>
+  <div class="hero-content">
+    <div class="hero-badge">✨ বাংলাদেশের #১ ডিজিটাল প্রোডাক্ট শপ</div>
+    <h1>আপনার ডিজিটাল সাফল্যের পথ <span class="highlight">শুরু হোক আজই</span></h1>
+    <p>কোর্স, ই-বুক, AI টুলস, টেমপ্লেট — সব একজায়গায়। একবার কিনুন, সারাজীবন ব্যবহার করুন।</p>
+    <div class="hero-benefits">
+      <div class="benefit-tag"><span>⚡</span> তাৎক্ষণিক অ্যাক্সেস</div>
+      <div class="benefit-tag"><span>🔄</span> লাইফটাইম আপডেট</div>
+      <div class="benefit-tag"><span>🎓</span> সার্টিফিকেট</div>
+      <div class="benefit-tag"><span>🛡️</span> মানি-ব্যাক গ্যারান্টি</div>
+    </div>
+    <div class="hero-btns">
+      <a href="#pricing" class="btn-primary">🚀 এখনই শুরু করুন — ৯৯৯৳</a>
+      <a href="#preview" class="btn-secondary">▶ প্রিভিউ দেখুন</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">৫০০০+</div>
+        <div class="stat-label">সন্তুষ্ট কাস্টমার</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">১০০+</div>
+        <div class="stat-label">ডিজিটাল প্রোডাক্ট</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">৪.৯⭐</div>
+        <div class="stat-label">গড় রেটিং</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">২৪/৭</div>
+        <div class="stat-label">সাপোর্ট</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- FEATURES -->
+<section id="features">
+  <div class="container">
+    <div class="text-center reveal">
+      <div class="section-tag">🎯 ফিচার</div>
+      <h2 class="section-title">কেন <span class="gradient">DreamFG Shop</span> আলাদা?</h2>
+      <p class="section-sub">আমাদের প্রতিটি প্রোডাক্ট তৈরি করা হয়েছে আপনার সাফল্যের কথা মাথায় রেখে</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card reveal">
+        <span class="feature-icon">🏆</span>
+        <h3>কোয়ালিটি কন্টেন্ট</h3>
+        <p>প্রতিটি প্রোডাক্ট বিশেষজ্ঞদের দ্বারা তৈরি। সর্বোচ্চ মান নিশ্চিত করা হয়।</p>
+      </div>
+      <div class="feature-card reveal">
+        <span class="feature-icon">⚡</span>
+        <h3>তাৎক্ষণিক অ্যাক্সেস</h3>
+        <p>পেমেন্ট করার সাথে সাথেই ডাউনলোড করুন। কোনো অপেক্ষা নেই।</p>
+      </div>
+      <div class="feature-card reveal">
+        <span class="feature-icon">🔄</span>
+        <h3>লাইফটাইম আপডেট</h3>
+        <p>একবার কিনলে সারাজীবন আপডেট পাবেন। কোনো অতিরিক্ত চার্জ নেই।</p>
+      </div>
+      <div class="feature-card reveal">
+        <span class="feature-icon">👨‍💼</span>
+        <h3>এক্সপার্ট সাপোর্ট</h3>
+        <p>যেকোনো সমস্যায় আমাদের এক্সপার্ট টিম সবসময় পাশে আছে।</p>
+      </div>
+      <div class="feature-card reveal">
+        <span class="feature-icon">🎓</span>
+        <h3>সার্টিফিকেট</h3>
+        <p>কোর্স সম্পন্ন করলে পাবেন আন্তর্জাতিক মানের সার্টিফিকেট।</p>
+      </div>
+      <div class="feature-card reveal">
+        <span class="feature-icon">👥</span>
+        <h3>কমিউনিটি অ্যাক্সেস</h3>
+        <p>হাজার হাজার শিক্ষার্থীর সাথে যুক্ত হন। একসাথে শিখুন, একসাথে বাড়ুন।</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- WHY US -->
+<section class="why-section" id="why">
+  <div class="container">
+    <div class="text-center reveal">
+      <div class="section-tag">💎 কেন আমরা</div>
+      <h2 class="section-title">আমাদের <span class="gradient">বিশ্বাসযোগ্যতা</span></h2>
+      <p class="section-sub">হাজারো সন্তুষ্ট কাস্টমারের আস্থার জায়গা</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-icon">🚀</div>
+        <h3>দ্রুত ডেলিভারি</h3>
+        <p>পেমেন্টের সাথে সাথেই প্রোডাক্ট পাঠানো হয়</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon">🕐</div>
+        <h3>২৪/৭ সাপোর্ট</h3>
+        <p>যেকোনো সময় আমাদের সাপোর্ট টিম প্রস্তুত</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon">⚡</div>
+        <h3>তাৎক্ষণিক অ্যাক্সেস</h3>
+        <p>কেনার পরপরই ব্যবহার শুরু করুন</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon">🛡️</div>
+        <h3>সিকিউর পেমেন্ট</h3>
+        <p>১০০% নিরাপদ ও এনক্রিপ্টেড পেমেন্ট সিস্টেম</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PREVIEW -->
+<section id="preview">
+  <div class="container">
+    <div class="text-center reveal">
+      <div class="section-tag">👀 প্রিভিউ</div>
+      <h2 class="section-title">প্রোডাক্ট <span class="gradient">দেখে নিন</span></h2>
+      <p class="section-sub">কেনার আগেই জেনে নিন কী পাচ্ছেন</p>
+    </div>
+    <div class="preview-grid">
+      <div class="mockup-area reveal">
+        <div class="mockup-screen">📱</div>
+        <p class="mockup-label">DreamFG Premium Dashboard</p>
+      </div>
+      <div class="video-area reveal">
+        <div class="video-placeholder">
+          <div class="play-btn">▶</div>
+        </div>
+        <h3>🎬 প্রোডাক্ট ডেমো ভিডিও</h3>
+        <p>আমাদের প্রিমিয়াম কন্টেন্টের একটি ছোট ঝলক দেখুন। সম্পূর্ণ অ্যাক্সেস পেতে এখনই কিনুন।</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PRICING -->
+<section class="pricing-section" id="pricing">
+  <div class="container">
+    <div class="text-center reveal">
+      <div class="section-tag">💰 মূল্য</div>
+      <h2 class="section-title">আজকেই <span class="gradient">অফার মূল্যে</span> নিন</h2>
+      <p class="section-sub">সীমিত সময়ের অফার — এখনই সুযোগ নিন</p>
+    </div>
+    <div class="pricing-card reveal">
+      <div class="pricing-badge">🔥 সীমিত সময়ের অফার — ৫০% ছাড়</div>
+      <p class="price-old">নিয়মিত মূল্য: ২০০০৳</p>
+      <div class="price-new">৯৯৯৳</div>
+      <p class="price-label">একবার পেমেন্ট — লাইফটাইম অ্যাক্সেস</p>
+      <div class="countdown">
+        <div class="count-box">
+          <span class="count-num" id="hours">11</span>
+          <div class="count-label">ঘণ্টা</div>
+        </div>
+        <div class="count-box">
+          <span class="count-num" id="minutes">59</span>
+          <div class="count-label">মিনিট</div>
+        </div>
+        <div class="count-box">
+          <span class="count-num" id="seconds">59</span>
+          <div class="count-label">সেকেন্ড</div>
+        </div>
+      </div>
+      <ul class="pricing-features">
+        <li>সমস্ত প্রিমিয়াম কন্টেন্টে অ্যাক্সেস</li>
+        <li>লাইফটাইম আপডেট সম্পূর্ণ বিনামূল্যে</li>
+        <li>সার্টিফিকেট অফ কম্পিলেশন</li>
+        <li>প্রাইভেট কমিউনিটি গ্রুপ অ্যাক্সেস</li>
+        <li>২৪/৭ এক্সপার্ট সাপোর্ট</li>
+        <li>৩০ দিনের মানি-ব্যাক গ্যারান্টি</li>
+      </ul>
+      <button class="btn-buy" onclick="window.open('https://wa.me/8801XXXXXXXXX?text=আমি DreamFG Shop থেকে প্রিমিয়াম প্যাকেজ কিনতে চাই', '_blank')">
+        🚀 এখনই কিনুন — মাত্র ৯৯৯৳
+      </button>
+      <div class="safe-badge">🔒 ১০০% নিরাপদ পেমেন্ট | ৩০ দিনের মানি-ব্যাক গ্যারান্টি</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- REVIEWS -->
+<section class="reviews-section" id="reviews">
+  <div class="container">
+    <div class="text-center reveal">
+      <div class="section-tag">⭐ রিভিউ</div>
+      <h2 class="section-title">কাস্টমাররা <span class="gradient">কী বলছেন</span></h2>
+      <p class="section-sub">৫০০০+ সন্তুষ্ট কাস্টমারের মধ্য থেকে কিছু কথা</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card reveal">
+        <div class="review-top">
+          <div class="avatar">র</div>
+          <div>
+            <div class="reviewer-name">রাহাত হাসান</div>
+            <div class="reviewer-role">ফ্রিল্যান্সার, ঢাকা</div>
+          </div>
+        </div>
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"DreamFG Shop থেকে AI টুলস কিনেছিলাম। সত্যিই অসাধারণ! মাসে ৫০,০০০+ ইনকাম করছি এখন। সাপোর্টও খুব ভালো।"</p>
+        <div class="verified">✅ যাচাইকৃত ক্রেতা</div>
+      </div>
+      <div class="review-card reveal">
+        <div class="review-top">
+          <div class="avatar" style="background:linear-gradient(135deg,#ec4899,#f97316)">স</div>
+          <div>
+            <div class="reviewer-name">সাদিয়া ইসলাম</div>
+            <div class="reviewer-role">কন্টেন্ট ক্রিয়েটর, চট্টগ্রাম</div>
+          </div>
+        </div>
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"টেমপ্লেট প্যাকেজটা কিনেছিলাম। অনেক সময় বাঁচছে এখন। প্রফেশনাল ডিজাইন একদম রেডি। সবাইকে রেকমেন্ড করব।"</p>
+        <div class="verified">✅ যাচাইকৃত ক্রেতা</div>
+      </div>
+      <div class="review-card reveal">
+        <div class="review-top">
+          <div class="avatar" style="background:linear-gradient(135deg,#10b981,#3b82f6)">ম</div>
+          <div>
+            <div class="reviewer-name">মাহমুদ আলী</div>
+            <div class="reviewer-role">উদ্যোক্তা, সিলেট</div>
+          </div>
+        </div>
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"কোর্সটি সম্পন্ন করে সার্টিফিকেট পেয়েছি। এখন নিজেই ব্যবসা পরিচালনা করছি। DreamFG Shop আমার জীবন বদলে দিয়েছে!"</p>
+        <div class="verified">✅ যাচাইকৃত ক্রেতা</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="text-center reveal">
+      <div class="section-tag">❓ প্রশ্ন</div>
+      <h2 class="section-title">সাধারণ <span class="gradient">জিজ্ঞাসা</span></h2>
+      <p class="section-sub">আপনার মনে যা প্রশ্ন আসছে তার উত্তর এখানেই পাবেন</p>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          কিনলে কীভাবে প্রোডাক্ট পাবো?
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-a">পেমেন্ট কনফার্ম হওয়ার সাথে সাথেই আপনার ইমেইল বা WhatsApp-এ ডাউনলোড লিংক পাঠানো হবে। সম্পূর্ণ তাৎক্ষণিক।</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          পেমেন্ট কীভাবে করতে হবে?
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-a">বিকাশ, নগদ, রকেট এবং ব্যাংক ট্রান্সফারের মাধ্যমে পেমেন্ট করা যাবে। আমাদের WhatsApp-এ যোগাযোগ করলে বিস্তারিত জানাবো।</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          রিফান্ড পলিসি কী?
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-a">৩০ দিনের মানি-ব্যাক গ্যারান্টি আছে। প্রোডাক্টে কোনো সমস্যা হলে বা সন্তুষ্ট না হলে সম্পূর্ণ রিফান্ড পাবেন, কোনো প্রশ্ন ছাড়াই।</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          লাইফটাইম আপডেট মানে কী?
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-a">একবার কিনলে প্রোডাক্টটি যতবার আপডেট হবে, প্রতিটি আপডেট আপনি সম্পূর্ণ বিনামূল্যে পাবেন। কোনো অতিরিক্ত পেমেন্ট লাগবে না।</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          সাপোর্ট কীভাবে পাবো?
+          <div class="faq-icon">+</div>
+        </div>
+        <div class="faq-a">WhatsApp, Facebook Messenger এবং ইমেইলের মাধ্যমে ২৪/৭ সাপোর্ট পাবেন। আমাদের টিম সর্বোচ্চ ১ ঘণ্টার মধ্যে সাড়া দেয়।</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="nav-logo" style="font-size:1.6rem;">Dream<span style="-webkit-text-fill-color:var(--accent);color:var(--accent);">FG</span> Shop</div>
+        <p>বাংলাদেশের সেরা ডিজিটাল প্রোডাক্ট প্ল্যাটফর্ম। আপনার ডিজিটাল সাফল্যের পথে আমরা আপনার বিশ্বস্ত সঙ্গী।</p>
+      </div>
+      <div class="footer-col">
+        <h4>লিংক</h4>
+        <a href="#home">হোম</a>
+        <a href="#features">ফিচার</a>
+        <a href="#pricing">মূল্য</a>
+        <a href="#reviews">রিভিউ</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="footer-col">
+        <h4>যোগাযোগ</h4>
+        <a href="https://wa.me/8801XXXXXXXXX">📱 WhatsApp</a>
+        <a href="#">📘 Facebook</a>
+        <a href="#">📸 Instagram</a>
+        <a href="#">✉️ Email</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© ২০২৪ DreamFG Shop. সর্বস্বত্ব সংরক্ষিত।</p>
+      <div class="social-links">
+        <a href="#" class="social-link">📘</a>
+        <a href="#" class="social-link">📸</a>
+        <a href="https://wa.me/8801XXXXXXXXX" class="social-link">💬</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- STICKY BUY BUTTON -->
+<a href="#pricing" class="sticky-buy" id="stickyBuy">🚀 এখনই কিনুন — ৯৯৯৳</a>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/8801XXXXXXXXX?text=আমি DreamFG Shop সম্পর্কে জানতে চাই" target="_blank" class="whatsapp-btn" title="WhatsApp এ যোগাযোগ করুন">💬</a>
+
+<script>
+// SCROLL REVEAL
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// STICKY BUY BUTTON
+const stickyBuy = document.getElementById('stickyBuy');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 400) stickyBuy.classList.add('show');
+  else stickyBuy.classList.remove('show');
+});
+
+// COUNTDOWN TIMER
+function startCountdown() {
+  let h = 11, m = 59, s = 59;
+  setInterval(() => {
+    s--;
+    if (s < 0) { s = 59; m--; }
+    if (m < 0) { m = 59; h--; }
+    if (h < 0) { h = 11; m = 59; s = 59; }
+    document.getElementById('hours').textContent = String(h).padStart(2,'0');
+    document.getElementById('minutes').textContent = String(m).padStart(2,'0');
+    document.getElementById('seconds').textContent = String(s).padStart(2,'0');
+  }, 1000);
+}
+startCountdown();
+
+// FAQ ACCORDION
+function toggleFaq(el) {
+  const item = el.parentElement;
+  const isActive = item.classList.contains('active');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+  if (!isActive) item.classList.add('active');
+}
+
+// NAV SCROLL EFFECT
+window.addEventListener('scroll', () => {
+  const nav = document.getElementById('navbar');
+  if (window.scrollY > 50) nav.style.background = 'rgba(10,10,15,0.97)';
+  else nav.style.background = 'rgba(10,10,15,0.85)';
+});
+</script>
+</body>
+</html>
